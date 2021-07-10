@@ -1,0 +1,6 @@
+- name: deploy muscari_host
+  hosts: muscari
+  become: yes
+  roles:
+    - common
+    - modpack

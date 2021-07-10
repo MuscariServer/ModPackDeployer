@@ -1,0 +1,8 @@
+---
+- name: git clone season pack
+  ansible.builtin.git:
+    repo: git@github.com:MuscariServer/{{ genv.modpack.season }}_ModPack.git
+    version: "{{ genv.modpack.version }}"
+    key_file: /home/amp/.ssh/github_rsa
+    accept_hostkey: true
+  no_log: true

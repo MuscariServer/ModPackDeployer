@@ -1,0 +1,11 @@
+---
+- name: Kernel tuning
+  sysctl:
+    name: fs.inotify.max_user_watches
+    value: "524288"
+    state: present
+    ignoreerrors: yes
+
+- name: Set timezone to Asia/Tokyo
+  timezone:
+    name: Asia/Tokyo
