@@ -2,4 +2,4 @@
 Semi-automatic deployment using Ansible.
 
 ## deploy
-ansible-playbook -i production ./init.yml --diff
+ansible-playbook -i ./inventory/production.yml ./init.yml --diff

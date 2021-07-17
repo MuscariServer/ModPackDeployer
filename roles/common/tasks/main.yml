@@ -1,10 +1,11 @@
 ---
 - name: Kernel tuning
   sysctl:
-    name: fs.inotify.max_user_watches
-    value: "524288"
+    name: "{{ item.name }}"
+    value: "{{ item.value }}"
     state: present
     ignoreerrors: yes
+  with_items: "{{ genv.kernel }}"
 
 - name: Set timezone to Asia/Tokyo
   timezone:

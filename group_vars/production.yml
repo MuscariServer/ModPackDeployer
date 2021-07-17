@@ -1,0 +1,17 @@
+genv:
+  kernel:
+    - { name: "fs.inotify.max_user_watches", value: 524288 }
+    - { name: "net.ipv4.tcp_window_scaling", value: 1 }
+    - { name: "net.ipv4.tcp_syncookies", value: 1 }
+    - { name: "net.core.rmem_max", value: 16777216 }
+    - { name: "net.core.wmem_max", value: 16777216 }
+    - { name: "net.ipv4.tcp_rmem", value: "4096 87380 16777216" }
+    - { name: "net.ipv4.tcp_wmem", value: "4096 65536 16777216" }
+  modpack:
+    season: S10
+    version: v1.0.0
+  amp:
+    path:
+      lobby: "/home/amp/.ampdata/instances/Minecraft01/Minecraft/"
+      main: "/home/amp/.ampdata/instances/Minecraft04/Minecraft/"
+      sub: "/home/amp/.ampdata/instances/Minecraft05/Minecraft/"
